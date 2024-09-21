@@ -1,0 +1,48 @@
+defaults:
+  - _self_
+
+exp_number: base  # 実行時に書き換え
+run_name: base  # 実行時に書き換え
+
+path:
+  data: ../../data
+  results: ../../results
+  train: ${path.data}/train.csv
+  test: ${path.data}/test.csv
+  sample_submission: ${path.data}/sample_submission.csv
+  results_dir: ${path.data}/${exp_number}/${run_name}
+
+seed: 42
+n_splits: 5
+target: target
+
+plt:
+  context: notebook # 文字の大きさ。小さい順で "paper", "notebook", "talk", "poster"
+  style: whitegrid # "white", "dark", "darkgrid","whitegrid"
+  palette: Set1 #色あい。 "deep", "muted", "pastel", "bright", "dark", "colorblind", "Set1", "Set2", "Set3", "tab10", "tab20", "tab20b", "tab20c"
+  rc:
+    font.family: sans-serif
+    figure.figsize: [6, 4]
+    figure.facecolor: white  # 透明にしたい場合は "none"
+    axes.grid: False
+    axes.edgecolor: black
+    axes.facecolor: none
+    xtick.color: black
+    ytick.color: black
+    xtick.direction: in
+    ytick.direction: in
+    xtick.major.size: 3
+    ytick.major.size: 3
+    xtick.major.width: 1
+    ytick.major.width: 1
+    xtick.minor.size: 2
+    ytick.minor.size: 2
+    xtick.minor.width: 1
+    ytick.minor.width: 1
+    xtick.top: True
+    ytick.right: True
+    xtick.major.pad: 2
+    ytick.major.pad: 2
+    grid.color: gray
+    grid.linestyle: --
+    grid.linewidth: 0.5

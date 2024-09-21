@@ -1,0 +1,44 @@
+{
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.editor.enablePreview": false,
+
+    "powermode.combo.location": "off",
+    "powermode.enabled": true,
+    "powermode.shake.enabled": false,
+
+    "editor.minimap.enabled": false,
+    "editor.rulers": [
+        120
+    ],
+
+    "notebook.output.scrolling": true,
+    "notebook.insertFinalNewline": true,
+    "jupyter.askForKernelRestart": false,
+    "notebook.formatOnSave.enabled": true,
+    "notebook.codeActionsOnSave": {
+        "notebook.source.fixAll": true,
+        "notebook.source.organizeImports": true
+    },
+
+
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
+
+    "files.insertFinalNewline": true,
+    "files.autoSave": "afterDelay",
+    "files.exclude": {
+        "src/__pycache__": true,
+        ".mypy_cache": true,
+        ".pytest_cache": true,
+        ".ruff_cache": true,
+        ".venv": true
+    },
+
+
+    "[python]": {
+        "editor.defaultFormatter": "charliermarsh.ruff",
+        "editor.formatOnSave": true
+    },
+
+    "window.autoDetectColorScheme": true
+}
