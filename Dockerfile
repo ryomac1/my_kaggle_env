@@ -5,7 +5,14 @@ ENV TZ=Asia/Tokyo
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
 # 必要なパッケージのインストール
-RUN apt-get update && apt-get install -y curl git make libgl1-mesa-dev libglib2.0-0 gcc python3-pip && \
+RUN apt-get update && apt-get install -y \
+    curl \
+    git \
+    make \
+    libgl1-mesa-dev \
+    libglib2.0-0 \
+    gcc \
+    python3-pip && \
     apt-get upgrade -y && \
     rm -rf /var/lib/apt/lists/* && \
     apt-get clean
@@ -28,6 +35,10 @@ RUN curl -LsSf https://astral.sh/uv/install.sh | sh
 
 # プロジェクトファイルをコピー
 COPY .python-version pyproject.toml uv.lock README.md ./
+
+# 環境変数を設定するために.envファイルをコピー
+COPY .env /workspace/.env
+RUN export $(cat /workspace/.env | xargs)
 
 # Pythonのバージョン固定と依存パッケージの同期
 RUN uv python pin "$(cat .python-version)" && \
