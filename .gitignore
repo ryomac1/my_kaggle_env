@@ -4,6 +4,7 @@
 notebooks/*
 docs/**/*
 src/*
+data/*
 
 
 !**/input/**/
