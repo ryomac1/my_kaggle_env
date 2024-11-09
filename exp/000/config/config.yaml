@@ -9,6 +9,7 @@ path:
   results: ../../results
   train: ${path.data}/train.csv
   test: ${path.data}/test.csv
+  misconception_mapping: ${path.data}/misconception_mapping.csv
   sample_submission: ${path.data}/sample_submission.csv
   results_dir: ${path.data}/${exp_number}/${run_name}
 
